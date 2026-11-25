@@ -1,35 +1,1217 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Nova Market — стрижки и маникюр. Каталог услуг и форма заявки.">
-<title>NOVA MARKET — красота в каждой детали</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>NOVA MARKET — Beauty Studio</title>
+
 <style>
-:root{--ink:#191817;--cream:#f5f0e8;--sand:#e5d7c2;--gold:#b9955b;--muted:#766f66;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-header{background:var(--ink);color:white;position:sticky;top:0;z-index:5;border-bottom:1px solid #38332d}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:800;letter-spacing:.15em;color:#e7cc9e;font-size:20px}.navlinks{display:flex;gap:24px;font-size:14px;color:#eee}.hero{background:linear-gradient(90deg,rgba(20,19,18,.82),rgba(20,19,18,.25)),url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:510px;display:flex;align-items:center;color:white}.hero-content{max-width:600px;padding:75px 0}.eyebrow{color:#e7cc9e;letter-spacing:.2em;text-transform:uppercase;font-size:12px;font-weight:bold}.hero h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,76px);line-height:1.03;margin:18px 0}.hero p{max-width:460px;color:#eee;font-size:17px}.btn{display:inline-block;border:0;background:var(--gold);color:#171513;padding:14px 22px;font-weight:bold;letter-spacing:.04em;border-radius:2px;cursor:pointer}.section{padding:76px 0}.section-head{text-align:center;margin:0 auto 36px;max-width:620px}.section-head h2{font:clamp(32px,4vw,46px) Georgia,serif;margin:8px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:white;box-shadow:0 8px 28px #34291a0b}.card img{width:100%;height:220px;object-fit:cover;display:block;background:var(--sand)}.card-body{padding:18px}.card h3{margin:0 0 5px;font:22px Georgia,serif}.card p{margin:0 0 12px;color:var(--muted);font-size:14px;min-height:42px}.price{font-weight:bold;color:#86653a}.about{background:#e9dfd1}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.about-grid img{width:100%;height:360px;object-fit:cover}.about h2{font:42px Georgia,serif;margin:8px 0 14px}.about p{color:#5f574e}.booking{background:var(--ink);color:white}.booking .section-head p{color:#c7bfb4}.form{max-width:620px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}.form label{font-size:13px;color:#e7cc9e;display:block;margin-bottom:6px}.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #655d53;background:#282522;color:white;border-radius:2px;font:inherit}.form .full{grid-column:1/-1}.note{font-size:12px;color:#bcb3a7}.contact{text-align:center}.contact p{color:var(--muted)}footer{background:#111;color:#cfc7bb;padding:25px 0;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:800px){.cards{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.navlinks{gap:12px;font-size:12px}.hero{min-height:440px}}
-@media(max-width:480px){.nav{height:auto;min-height:66px;align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{width:100%;justify-content:space-between}.cards{gap:10px}.card img{height:150px}.card-body{padding:12px}.card h3{font-size:18px}.form{grid-template-columns:1fr}.form .full{grid-column:auto}.section{padding:55px 0}}
+
+:root {
+
+  --dark:#191817;
+
+  --cream:#f5f0e8;
+
+  --gold:#b9955b;
+
+  --white:#fff;
+
+}
+
+* {box-sizing:border-box}
+
+html {scroll-behavior:smooth}
+
+body {
+
+  margin:0;
+
+  font-family:Arial,sans-serif;
+
+  background:var(--cream);
+
+  color:var(--dark);
+
+}
+
+.wrap {width:min(1100px,92%);margin:auto}
+
+header {
+
+  background:var(--dark);
+
+  color:white;
+
+  padding:20px 0;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:5;
+
+}
+
+.nav {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:15px;
+
+}
+
+.logo {color:#e7cc9e;font-weight:bold;letter-spacing:3px}
+
+nav {display:flex;gap:18px;flex-wrap:wrap}
+
+nav a {color:white;text-decoration:none;font-size:14px}
+
+.hero {
+
+  min-height:470px;
+
+  display:flex;
+
+  align-items:center;
+
+  color:white;
+
+  background:linear-gradient(90deg,#191817dd,#19181744),
+
+  url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1600&q=80') center/cover;
+
+}
+
+.hero-content {padding:70px 0;max-width:600px}
+
+.hero h1 {font:clamp(42px,7vw,72px) Georgia,serif;margin:15px 0}
+
+.hero p {font-size:17px;line-height:1.7}
+
+.btn {
+
+  background:var(--gold);
+
+  color:#171513;
+
+  border:0;
+
+  padding:14px 23px;
+
+  border-radius:5px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  text-decoration:none;
+
+  display:inline-block;
+
+}
+
+.section {padding:65px 0}
+
+.heading {text-align:center;margin-bottom:35px}
+
+.heading h2 {font:38px Georgia,serif}
+
+.heading p {color:#777}
+
+.cards {
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:17px;
+
+}
+
+.card {background:white;padding-bottom:18px}
+
+.card img {width:100%;height:190px;object-fit:cover}
+
+.card h3,.card p,.card strong {margin:12px 15px;display:block}
+
+.card p {color:#777;font-size:14px}
+
+.card strong {color:#99713c}
+
+.about {background:#e9dfd1}
+
+.about-grid {
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:35px;
+
+  align-items:center;
+
+}
+
+.about img {width:100%;height:320px;object-fit:cover}
+
+.about h2 {font:38px Georgia,serif}
+
+/* Онлайн-запись */
+
+.booking {background:#f7f5f1}
+
+.booking-box {
+
+  background:white;
+
+  max-width:760px;
+
+  margin:auto;
+
+  padding:25px;
+
+  border-radius:18px;
+
+  box-shadow:0 10px 35px #00000010;
+
+}
+
+.progress {display:flex;gap:7px;margin-bottom:25px}
+
+.progress span {
+
+  height:5px;flex:1;background:#e5e0d8;border-radius:10px
+
+}
+
+.progress span.active {background:var(--gold)}
+
+.step {display:none}
+
+.step.active {display:block}
+
+.step h3 {font:29px Georgia,serif;margin-bottom:8px}
+
+.hint {color:#817b73;font-size:14px;margin-bottom:22px}
+
+.choice {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:15px;
+
+  border:1px solid #e5e0d8;
+
+  border-radius:12px;
+
+  margin-bottom:10px;
+
+  cursor:pointer;
+
+}
+
+.choice:has(input:checked) {
+
+  border-color:var(--gold);
+
+  background:#fbf7f0;
+
+}
+
+.choice input {accent-color:#b9955b;width:19px;height:19px}
+
+.choice-info {flex:1}
+
+.choice-info strong {display:block}
+
+.choice-info small {color:#888}
+
+.price {color:#98713d;font-weight:bold}
+
+.total {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  border-top:1px solid #eee;
+
+  padding-top:15px;
+
+  margin-top:15px;
+
+  font-weight:bold;
+
+}
+
+.actions {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin-top:25px;
+
+}
+
+.back {
+
+  border:0;
+
+  background:#eeeae4;
+
+  padding:13px 22px;
+
+  border-radius:30px;
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+button:disabled {opacity:.4;cursor:not-allowed}
+
+.calendar {
+
+  border:1px solid #eee;
+
+  padding:15px;
+
+  border-radius:15px;
+
+}
+
+.month {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:15px;
+
+}
+
+.month button {
+
+  border:0;
+
+  background:#eeeae4;
+
+  width:35px;height:35px;
+
+  border-radius:50%;
+
+  font-size:20px;
+
+}
+
+.days {
+
+  display:grid;
+
+  grid-template-columns:repeat(7,1fr);
+
+  gap:5px;
+
+  text-align:center;
+
+}
+
+.days button {
+
+  border:0;
+
+  background:#f4f1ed;
+
+  padding:12px 0;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+}
+
+.days button:disabled {opacity:.25;cursor:default}
+
+.days button.selected,.times button.selected {
+
+  background:#df713d;color:white;
+
+}
+
+.days .weekday {
+
+  font-size:12px;
+
+  color:#888;
+
+  padding:8px 0;
+
+}
+
+.time-title {margin:20px 0 10px;color:#777}
+
+.times {display:flex;gap:9px;flex-wrap:wrap}
+
+.times button {
+
+  border:0;
+
+  background:#f0eeeb;
+
+  padding:12px 19px;
+
+  border-radius:25px;
+
+  cursor:pointer;
+
+}
+
+.fields {display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.fields label {font-size:13px;color:#777}
+
+.fields input,.fields textarea {
+
+  width:100%;
+
+  padding:13px;
+
+  margin-top:6px;
+
+  border:1px solid #ddd;
+
+  border-radius:9px;
+
+  font:inherit;
+
+}
+
+.fields .full {grid-column:1/-1}
+
+.summary {
+
+  background:#f6f2eb;
+
+  padding:15px;
+
+  border-radius:12px;
+
+  margin:18px 0;
+
+  line-height:1.8;
+
+}
+
+.note {font-size:12px;color:#888;margin-top:15px}
+
+.status {color:#397443;margin-top:15px}
+
+.contact {text-align:center}
+
+footer {
+
+  background:#171513;
+
+  color:white;
+
+  padding:25px;
+
+  text-align:center;
+
+}
+
+@media(max-width:750px) {
+
+  .cards {grid-template-columns:repeat(2,1fr)}
+
+  .about-grid {grid-template-columns:1fr}
+
+}
+
+@media(max-width:480px) {
+
+  .nav {flex-direction:column}
+
+  nav {gap:10px}
+
+  .booking-box {padding:15px}
+
+  .fields {grid-template-columns:1fr}
+
+  .fields .full {grid-column:auto}
+
+  .days button {padding:10px 0}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="logo" href="#home">NOVA MARKET</a><nav class="navlinks"><a href="#services">Услуги</a><a href="#about">О нас</a><a href="#booking">Запись</a><a href="#contacts">Контакты</a></nav></div></header>
+
+<header>
+
+<div class="wrap nav">
+
+  <a class="logo" href="#home">NOVA MARKET</a>
+
+  <nav>
+
+    <a href="#services">Услуги</a>
+
+    <a href="#about">О нас</a>
+
+    <a href="#booking">Запись</a>
+
+    <a href="#contacts">Контакты</a>
+
+  </nav>
+
+</div>
+
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-content"><div class="eyebrow">Beauty studio · Hair · Nails</div><h1>Красота<br>в каждой детали</h1><p>Стрижки и маникюр в уютной атмосфере. Выбери услугу и оставь заявку на удобное время.</p><a class="btn" href="#booking">Записаться</a></div></section>
-<section class="section" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Наш каталог</div><h2>Услуги и цены</h2><p>Выбери то, что подходит именно тебе. Цены ниже — примеры, их можно заменить на актуальные.</p></div>
+
+<section class="hero" id="home">
+
+<div class="wrap hero-content">
+
+  <p>BEAUTY STUDIO · HAIR · NAILS</p>
+
+  <h1>Красота в каждой детали</h1>
+
+  <p>Стрижки и маникюр в уютной атмосфере. Выбери услугу и запишись онлайн.</p>
+
+  <a href="#booking" class="btn">Записаться</a>
+
+</div>
+
+</section>
+
+<section class="section" id="services">
+
+<div class="wrap">
+
+<div class="heading">
+
+  <h2>Услуги и цены</h2>
+
+  <p>Выбери подходящую услугу</p>
+
+</div>
+
 <div class="cards">
-<article class="card"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85" alt="Женская стрижка"><div class="card-body"><h3>Женская стрижка</h3><p>Форма, обновление длины и укладка.</p><div class="price">от 3 000 ₸</div></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85" alt="Мужская стрижка"><div class="card-body"><h3>Мужская стрижка</h3><p>Аккуратная стрижка и оформление.</p><div class="price">от 2 500 ₸</div></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85" alt="Маникюр"><div class="card-body"><h3>Маникюр</h3><p>Уход за ногтями и аккуратная форма.</p><div class="price">от 4 000 ₸</div></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=85" alt="Маникюр с покрытием"><div class="card-body"><h3>Маникюр с покрытием</h3><p>Однотонное покрытие и аккуратный финиш.</p><div class="price">от 5 000 ₸</div></div></article>
-</div></div></section>
-<section class="section about" id="about"><div class="wrap about-grid"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Работа мастера в салоне"><div><div class="eyebrow">О Nova Market</div><h2>Время для себя</h2><p>Nova Market — пространство для ухода за собой. Здесь можно выбрать стрижку или маникюр и оставить заявку на посещение.</p><p>Добавьте сюда описание мастеров, опыт и особенности вашего салона, когда эти данные будут готовы.</p><a class="btn" href="#booking">Оставить заявку</a></div></div></section>
-<section class="section booking" id="booking"><div class="wrap"><div class="section-head"><div class="eyebrow">Онлайн-запись</div><h2>Запланируй визит</h2><p>Заполни форму — она подготовит сообщение для отправки администратору.</p></div>
-<form class="form" id="bookingForm"><div><label for="name">Твоё имя</label><input id="name" name="name" placeholder="Имя" required></div><div><label for="phone">Телефон для связи</label><input id="phone" name="phone" type="tel" placeholder="+7 ..." required></div><div><label for="service">Услуга</label><select id="service" name="service"><option>Женская стрижка</option><option>Мужская стрижка</option><option>Маникюр</option><option>Маникюр с покрытием</option></select></div><div><label for="date">Желаемая дата</label><input id="date" name="date" type="date" required></div><div class="full"><label for="comment">Комментарий (необязательно)</label><textarea id="comment" name="comment" rows="3" placeholder="Удобное время или пожелания"></textarea></div><div class="full"><button class="btn" type="submit">Подготовить заявку</button><p class="note">Форма не отправляет данные автоматически. После нажатия откроется приложение для отправки сообщения.</p><p id="status" role="status"></p></div></form>
-</div></section>
-<section class="section contact" id="contacts"><div class="wrap"><div class="eyebrow">Будем на связи</div><h2 style="font:42px Georgia,serif">Контакты</h2><p>Добавьте город, адрес и рабочий номер телефона салона.</p><p><strong>Город:</strong> уточняется &nbsp;·&nbsp; <strong>Телефон:</strong> добавьте номер</p></div></section>
-</main><footer><div class="wrap footer-row"><span>© 2026 NOVA MARKET</span><span>Красота в каждой детали</span></div></footer>
+
+  <article class="card">
+
+    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80">
+
+    <h3>Женская стрижка</h3>
+
+    <p>Стрижка и укладка</p>
+
+    <strong>от 3 000 ₸</strong>
+
+  </article>
+
+  <article class="card">
+
+    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80">
+
+    <h3>Мужская стрижка</h3>
+
+    <p>Аккуратная стрижка</p>
+
+    <strong>от 2 500 ₸</strong>
+
+  </article>
+
+  <article class="card">
+
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80">
+
+    <h3>Маникюр</h3>
+
+    <p>Уход за ногтями</p>
+
+    <strong>от 4 000 ₸</strong>
+
+  </article>
+
+  <article class="card">
+
+    <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80">
+
+    <h3>Маникюр с покрытием</h3>
+
+    <p>Маникюр и покрытие</p>
+
+    <strong>от 5 000 ₸</strong>
+
+  </article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section about" id="about">
+
+<div class="wrap about-grid">
+
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80">
+
+<div>
+
+  <h2>Время для себя</h2>
+
+  <p>Nova Market — пространство для ухода за собой. Выбирай стрижку или маникюр и оставляй заявку на посещение.</p>
+
+  <a href="#booking" class="btn">Записаться</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section booking" id="booking">
+
+<div class="wrap">
+
+<div class="heading">
+
+  <h2>Онлайн-запись</h2>
+
+  <p>Выбери мастера, услуги и удобное время</p>
+
+</div>
+
+<div class="booking-box">
+
+<div class="progress">
+
+  <span class="active"></span>
+
+  <span></span><span></span><span></span>
+
+</div>
+
+<!-- ШАГ 1 -->
+
+<div class="step active" data-step="0">
+
+<h3>Выбери специалиста</h3>
+
+<p class="hint">К кому хочешь записаться?</p>
+
+<label class="choice">
+
+  <input type="radio" name="staff" value="Любой специалист" checked>
+
+  <span class="choice-info"><strong>Любой специалист</strong><small>Подберём свободного мастера</small></span>
+
+</label>
+
+<label class="choice">
+
+  <input type="radio" name="staff" value="Мастер по волосам">
+
+  <span class="choice-info"><strong>Мастер по волосам</strong><small>Стрижки и укладки</small></span>
+
+</label>
+
+<label class="choice">
+
+  <input type="radio" name="staff" value="Мастер маникюра">
+
+  <span class="choice-info"><strong>Мастер маникюра</strong><small>Маникюр и покрытие</small></span>
+
+</label>
+
+<div class="actions">
+
+  <span></span><button class="btn next">Далее</button>
+
+</div>
+
+</div>
+
+<!-- ШАГ 2 -->
+
+<div class="step" data-step="1">
+
+<h3>Выбери услуги</h3>
+
+<p class="hint">Можно выбрать несколько услуг</p>
+
+<label class="choice">
+
+  <input type="checkbox" class="service" value="Женская стрижка" data-price="3000" data-min="60">
+
+  <span class="choice-info"><strong>Женская стрижка</strong><small>60 минут</small></span>
+
+  <span class="price">3 000 ₸</span>
+
+</label>
+
+<label class="choice">
+
+  <input type="checkbox" class="service" value="Мужская стрижка" data-price="2500" data-min="60">
+
+  <span class="choice-info"><strong>Мужская стрижка</strong><small>60 минут</small></span>
+
+  <span class="price">2 500 ₸</span>
+
+</label>
+
+<label class="choice">
+
+  <input type="checkbox" class="service" value="Маникюр" data-price="4000" data-min="60">
+
+  <span class="choice-info"><strong>Маникюр</strong><small>60 минут</small></span>
+
+  <span class="price">4 000 ₸</span>
+
+</label>
+
+<label class="choice">
+
+  <input type="checkbox" class="service" value="Маникюр с покрытием" data-price="5000" data-min="90">
+
+  <span class="choice-info"><strong>Маникюр с покрытием</strong><small>90 минут</small></span>
+
+  <span class="price">5 000 ₸</span>
+
+</label>
+
+<div class="total">
+
+  <span id="count">Выбрано: 0</span>
+
+  <span id="total">0 ₸</span>
+
+</div>
+
+<div class="actions">
+
+  <button class="back prev">Назад</button>
+
+  <button class="btn next" id="serviceNext" disabled>Далее</button>
+
+</div>
+
+</div>
+
+<!-- ШАГ 3 -->
+
+<div class="step" data-step="2">
+
+<h3>Дата и время</h3>
+
+<p class="hint">Выбери удобный день и время</p>
+
+<div class="calendar">
+
+<div class="month">
+
+  <button type="button" id="monthPrev">‹</button>
+
+  <strong id="monthName"></strong>
+
+  <button type="button" id="monthNext">›</button>
+
+</div>
+
+<div class="days" id="days"></div>
+
+</div>
+
+<p class="time-title">Утро</p>
+
+<div class="times">
+
+  <button type="button" class="time">10:00</button>
+
+  <button type="button" class="time">11:00</button>
+
+</div>
+
+<p class="time-title">День</p>
+
+<div class="times">
+
+  <button type="button" class="time">12:00</button>
+
+  <button type="button" class="time">13:00</button>
+
+  <button type="button" class="time">15:00</button>
+
+  <button type="button" class="time">16:00</button>
+
+</div>
+
+<p class="time-title">Вечер</p>
+
+<div class="times">
+
+  <button type="button" class="time">17:00</button>
+
+  <button type="button" class="time">18:00</button>
+
+  <button type="button" class="time">19:00</button>
+
+</div>
+
+<p class="note">Время пока примерное. Администратор подтвердит наличие свободного места.</p>
+
+<div class="actions">
+
+  <button class="back prev">Назад</button>
+
+  <button class="btn next" id="dateNext" disabled>Далее</button>
+
+</div>
+
+</div>
+
+<!-- ШАГ 4 -->
+
+<div class="step" data-step="3">
+
+<h3>Подтверждение записи</h3>
+
+<p class="hint">Оставь свои контактные данные</p>
+
+<div class="summary" id="summary"></div>
+
+<form id="bookingForm">
+
+<div class="fields">
+
+  <div>
+
+    <label for="clientName">Имя</label>
+
+    <input id="clientName" required placeholder="Твоё имя">
+
+  </div>
+
+  <div>
+
+    <label for="clientPhone">Телефон</label>
+
+    <input id="clientPhone" type="tel" required placeholder="+7 ...">
+
+  </div>
+
+  <div class="full">
+
+    <label for="clientComment">Комментарий</label>
+
+    <textarea id="clientComment" rows="3" placeholder="Пожелания"></textarea>
+
+  </div>
+
+</div>
+
+<div class="actions">
+
+  <button type="button" class="back prev">Назад</button>
+
+  <button type="submit" class="btn">Отправить заявку</button>
+
+</div>
+
+<p class="note">После нажатия откроется Telegram для отправки подготовленного сообщения.</p>
+
+<p class="status" id="status"></p>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section contact" id="contacts">
+
+<div class="wrap">
+
+<div class="heading">
+
+<h2>Контакты</h2>
+
+<p>Город, адрес и время работы добавим позже.</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>© 2026 NOVA MARKET · Красота в каждой детали</footer>
+
 <script>
-document.getElementById('bookingForm').addEventListener('submit',async function(e){e.preventDefault();const f=new FormData(this);const text=`🔔 Заявка NOVA MARKET\nИмя: ${f.get('name')}\nТелефон: ${f.get('phone')}\nУслуга: ${f.get('service')}\nДата: ${f.get('date')}\nКомментарий: ${f.get('comment')||'нет'}`;document.getElementById('status').textContent='Отправляем...';try{const r=await fetch('https://api.telegram.org/bot9257214649:AAGfSHhcJ1qLHtIiy_ZgCSRVF_T6J4tUN44/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'5807217500',text:text})});if(r.ok){document.getElementById('status').textContent='✅ Заявка отправлена! Мы скоро свяжемся.';this.reset();}else{document.getElementById('status').textContent='Ошибка отправки. Попробуйте ещё раз.';}}catch(err){document.getElementById('status').textContent='Ошибка сети. Попробуйте ещё раз.';}});
+
+(() => {
+
+  const steps = [...document.querySelectorAll('.step')];
+
+  const bars = [...document.querySelectorAll('.progress span')];
+
+  let current = 0;
+
+  let chosenDate = '';
+
+  let chosenTime = '';
+
+  let month = new Date();
+
+  month.setDate(1);
+
+  const services = () =>
+
+    [...document.querySelectorAll('.service:checked')];
+
+  const price = () =>
+
+    services().reduce((sum,x) => sum + Number(x.dataset.price),0);
+
+  const duration = () =>
+
+    services().reduce((sum,x) => sum + Number(x.dataset.min),0);
+
+  const staff = () =>
+
+    document.querySelector('input[name="staff"]:checked').value;
+
+  function showStep(number) {
+
+    if (number === 2 && services().length === 0) return;
+
+    if (number === 3 && (!chosenDate || !chosenTime)) return;
+
+    current = number;
+
+    steps.forEach((step,i) =>
+
+      step.classList.toggle('active',i === number)
+
+    );
+
+    bars.forEach((bar,i) =>
+
+      bar.classList.toggle('active',i <= number)
+
+    );
+
+    if (number === 2) drawCalendar();
+
+    if (number === 3) drawSummary();
+
+    document.getElementById('booking').scrollIntoView({
+
+      behavior:'smooth'
+
+    });
+
+  }
+
+  document.querySelectorAll('.next').forEach(button => {
+
+    button.addEventListener('click',() => showStep(current + 1));
+
+  });
+
+  document.querySelectorAll('.prev').forEach(button => {
+
+    button.addEventListener('click',() => showStep(current - 1));
+
+  });
+
+  function updateTotal() {
+
+    document.getElementById('count').textContent =
+
+      'Выбрано: ' + services().length;
+
+    document.getElementById('total').textContent =
+
+      new Intl.NumberFormat('ru-RU').format(price()) + ' ₸';
+
+    document.getElementById('serviceNext').disabled =
+
+      services().length === 0;
+
+  }
+
+  document.querySelectorAll('.service').forEach(input => {
+
+    input.addEventListener('change',updateTotal);
+
+  });
+
+  function drawCalendar() {
+
+    const box = document.getElementById('days');
+
+    const name = document.getElementById('monthName');
+
+    box.innerHTML = '';
+
+    const names = ['Январь','Февраль','Март','Апрель','Май',
+
+      'Июнь','Июль','Август','Сентябрь','Октябрь',
+
+      'Ноябрь','Декабрь'];
+
+    name.textContent = names[month.getMonth()] + ' ' +
+
+      month.getFullYear();
+
+    ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'].forEach(day => {
+
+      const el = document.createElement('div');
+
+      el.className = 'weekday';
+
+      el.textContent = day;
+
+      box.appendChild(el);
+
+    });
+
+    const first = new Date(month.getFullYear(),month.getMonth(),1);
+
+    const offset = (first.getDay() + 6) % 7;
+
+    const count = new Date(
+
+      month.getFullYear(),month.getMonth()+1,0
+
+    ).getDate();
+
+    const today = new Date();
+
+    today.setHours(0,0,0,0);
+
+    for(let i=0;i<offset;i++) {
+
+      box.appendChild(document.createElement('span'));
+
+    }
+
+    for(let d=1;d<=count;d++) {
+
+      const date = new Date(
+
+        month.getFullYear(),month.getMonth(),d
+
+      );
+
+      const key = date.getFullYear()+'-'+
+
+        String(date.getMonth()+1).padStart(2,'0')+'-'+
+
+        String(d).padStart(2,'0');
+
+      const button = document.createElement('button');
+
+      button.type = 'button';
+
+      button.textContent = d;
+
+      if(date < today) button.disabled = true;
+
+      if(key === chosenDate) button.classList.add('selected');
+
+      button.addEventListener('click',() => {
+
+        chosenDate = key;
+
+        chosenTime = '';
+
+        document.querySelectorAll('.time').forEach(t =>
+
+          t.classList.remove('selected')
+
+        );
+
+        document.getElementById('dateNext').disabled = true;
+
+        drawCalendar();
+
+      });
+
+      box.appendChild(button);
+
+    }
+
+  }
+
+  document.getElementById('monthPrev').onclick = () => {
+
+    const now = new Date();
+
+    const first = new Date(now.getFullYear(),now.getMonth(),1);
+
+    const previous = new Date(
+
+      month.getFullYear(),month.getMonth()-1,1
+
+    );
+
+    if(previous >= first) {
+
+      month = previous;
+
+      drawCalendar();
+
+    }
+
+  };
+
+  document.getElementById('monthNext').onclick = () => {
+
+    month = new Date(month.getFullYear(),month.getMonth()+1,1);
+
+    drawCalendar();
+
+  };
+
+  document.querySelectorAll('.time').forEach(button => {
+
+    button.addEventListener('click',() => {
+
+      if(!chosenDate) {
+
+        alert('Сначала выбери дату');
+
+        return;
+
+      }
+
+      chosenTime = button.textContent;
+
+      document.querySelectorAll('.time').forEach(t =>
+
+        t.classList.toggle('selected',t === button)
+
+      );
+
+      document.getElementById('dateNext').disabled = false;
+
+    });
+
+  });
+
+  function drawSummary() {
+
+    const date = new Date(chosenDate+'T12:00:00')
+
+      .toLocaleDateString('ru-RU');
+
+    document.getElementById('summary').innerHTML = `
+
+      <strong>Специалист:</strong> ${staff()}<br>
+
+      <strong>Услуги:</strong> ${services().map(x=>x.value).join(', ')}<br>
+
+      <strong>Дата:</strong> ${date}<br>
+
+      <strong>Время:</strong> ${chosenTime}<br>
+
+      <strong>Длительность:</strong> ${duration()} минут<br>
+
+      <strong>Стоимость:</strong> ${price()} ₸
+
+    `;
+
+  }
+
+  document.getElementById('bookingForm')
+
+    .addEventListener('submit',event => {
+
+      event.preventDefault();
+
+      const name = document.getElementById('clientName').value.trim();
+
+      const phone = document.getElementById('clientPhone').value.trim();
+
+      const comment = document.getElementById('clientComment').value.trim();
+
+      const message = [
+
+        'Новая заявка NOVA MARKET',
+
+        'Имя: '+name,
+
+        'Телефон: '+phone,
+
+        'Специалист: '+staff(),
+
+        'Услуги: '+services().map(x=>x.value).join(', '),
+
+        'Дата: '+chosenDate,
+
+        'Время: '+chosenTime,
+
+        'Стоимость: '+price()+' тенге',
+
+        'Комментарий: '+(comment || 'Нет')
+
+      ].join('\n');
+
+      document.getElementById('status').textContent =
+
+        'Открываем Telegram для отправки заявки.';
+
+      const url = 'https://t.me/share/url?url='+
+
+        encodeURIComponent('https://novamarketbeautybot.github.io/novamarket-site/')+
+
+        '&text='+encodeURIComponent(message);
+
+      window.location.href = url;
+
+    });
+
+  updateTotal();
+
+})();
+
 </script>
-</body></html>
+
+</body>
+
+</html>
